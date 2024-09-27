@@ -10,10 +10,14 @@ Google Cloud Platform, Streamlit, OpenAI, VS code, CodeLabs, Git, Python
 
 **Desired Outcome or Solution**
 
-User-Friendly Interface
+User-Friendly Interface 
+
 Integration with Streamlit
+
 Integration with OpenAI
+
 Comparison of Values
+
 Feedback and Modification Options
 
 **Contributions**
