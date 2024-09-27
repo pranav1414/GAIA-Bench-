@@ -36,3 +36,7 @@ ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
 https://docs.google.com/document/d/1su4gMb_hN5ttJN0CqJE0ys75dU0dIgoKqAdrXFyyKIw/edit#heading=h.s5tcx27zwqt8
 
 **Code labs** - https://codelabs-preview.appspot.com/?file_id=1su4gMb_hN5ttJN0CqJE0ys75dU0dIgoKqAdrXFyyKIw#0
+
+**Video** - https://drive.google.com/drive/folders/1iD5G96lslRXHtgUTsO-C5BzDfbdCYkbh?usp=drive_link
+
+**Web Link** - http://10.110.211.51:8501
