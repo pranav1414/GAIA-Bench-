@@ -122,3 +122,50 @@ def handle_openai_response_with_file(question, gcp_object_path):
         else:
             st.error("No response from OpenAI.")
             return None
+        
+# Streamlit app layout
+st.title("**OpenAI Based Evaluation Interface for GAIA Dataset Validation**")
+ 
+# Fetch data from GCP SQL using sql_streamlit_connection
+data = sql_conn.get_data_from_sql()
+ 
+# Display the data in Streamlit
+if not data.empty:
+    st.write("**Data fetched successfully:**")
+    st.dataframe(data)
+else:
+    st.write("No data found or error")
+ 
+# Select a row to evaluate
+selected_index = st.selectbox("**Select the row to evaluate**", data.index)
+ 
+if selected_index is not None:
+    selected_row = data.loc[selected_index]
+    st.write(f"Question: {selected_row['question']}")
+    st.write(f"**Dependency file:** {selected_row['file_name']}")
+    step_choice = st.radio("**Choose Step**", ("Step 1 (Question only)", "Step 2 (Question + Steps)"))
+   
+    if step_choice == "Step 2 (Question + Steps)":
+        st.write("Steps:")
+        st.text_area("Steps", selected_row["steps"], height=100)
+ 
+    if st.button(f"Get OpenAI Response and Compare for Row {selected_index + 1}"):
+        openai_response = handle_openai_response_with_file(selected_row['question'], selected_row['gcp_object_path'])
+       
+        if openai_response:
+            exact_match = openai_response == selected_row['final_answer']
+            contains_match = selected_row['final_answer'] in openai_response
+ 
+            match_result = "Exact Match" if exact_match else "Contains Match" if contains_match else "No Match"
+           
+            # Save only the required columns to local CSV
+            with open('openai_responses.csv', 'a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([selected_row['task_id'], selected_row['question'], selected_row['final_answer'], match_result])
+ 
+            st.write(f"**Comparison Results:** {match_result}")
+ 
+            # Display the content of the CSV
+            with open('openai_responses.csv', 'r') as file:
+                st.write("**Summary Sheet:**")
+                st.text(file.read())        
