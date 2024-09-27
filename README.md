@@ -1,4 +1,4 @@
-# Model Evaluation Pipeline with Streamlit and OpenAI
+# Streamlit-Powered Model Evaluation Interface for GAIA Dataset Validation
 
 **Project Overview :**
 
