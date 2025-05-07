@@ -1,4 +1,4 @@
-# Streamlit-Powered Model Evaluation Interface for GAIA Dataset Validation
+# GAIA Bench Project 
 
 **Project Overview :**
 
@@ -19,24 +19,3 @@ Integration with OpenAI
 Comparison of Values
 
 Feedback and Modification Options
-
-**Contribution :**
-
-WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR 
-ASSIGNMENT AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK
-
-| Name            | Contribution %                       |
-|------------------|-------------------------------------|
-| Shubham Agarwal  | 33.33 %                             |
-| Chinmay Sawant   | 33.33 %                             |
-| Pranav Sonje     | 33.33 %                             |
-
-
-**Copy of Codelabs_Team_9** - Google Docs
-https://docs.google.com/document/d/1su4gMb_hN5ttJN0CqJE0ys75dU0dIgoKqAdrXFyyKIw/edit#heading=h.s5tcx27zwqt8
-
-**Code labs** - https://codelabs-preview.appspot.com/?file_id=1su4gMb_hN5ttJN0CqJE0ys75dU0dIgoKqAdrXFyyKIw#0
-
-**Video** - https://drive.google.com/drive/folders/1iD5G96lslRXHtgUTsO-C5BzDfbdCYkbh?usp=drive_link
-
-**Web Link** - http://10.110.211.51:8501
